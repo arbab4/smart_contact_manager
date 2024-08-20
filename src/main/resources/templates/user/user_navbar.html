@@ -1,0 +1,25 @@
+<nav data-th-fragment="user-navbar"
+    class=" bg-white dark:bg-secondarydark  w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 sm:pl-64 fixed">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
+        <a th:href="@{'/home'}" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <i class="fa-solid fa-phone-volume" style="color: #348dd1;"></i>
+            <div class="self-center font-semibold whitespace-nowrap sm:flex-shrink dark:text-white text-md sm:text-xl">
+                <span>Smart Contact Manager</span>
+            </div>
+
+        </a>
+        <div class="flex gap-1 md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+
+            <button id="theme-change-button"
+                class="bg-gray-200 px-3 py-2 font-bold border-gray-800 border-2 rounded-xl dark:text-white dark:bg-primarydark dark:font-bold dark:border-gray-400 dark:border-2 dark:rounded-xl">
+                <i class="fa-solid fa-xs fa-circle-half-stroke"></i>
+                <span></span>
+            </button>
+            <a type="button" data-th-href="@{'/user/profile'}" data-th-text="${user.name}"
+                class="bg-green-800 px-3 py-2 text-white font-semibold border-gray-600 border-2 rounded-xl dark:text-white  dark:bg-green-800 dark:font-semibold dark:border-gray-500 dark:border-2 dark:rounded-xl"></a>
+            <a type="button" data-th-href="@{'/logout'}"
+                class="bg-red-500  px-3 py-2 font-semibold border-gray-800 border-2 rounded-xl dark:text-white  dark:bg-red-500 dark:font-semibold dark:border-gray-400 dark:border-2 dark:rounded-xl">Logout</a>
+
+        </div>
+    </div>
+</nav>

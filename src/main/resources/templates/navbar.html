@@ -1,0 +1,26 @@
+<nav data-th-fragment="navbar"
+    class=" bg-white dark:bg-secondarydark  w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 sm:pl-64 fixed">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
+        <a th:href="@{'/home'}" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <i class="fa-solid fa-phone-volume" style="color: #348dd1;"></i>
+            <div class="self-center font-semibold whitespace-nowrap sm:flex-shrink dark:text-white text-md sm:text-xl">
+                <span>Smart Contact Manager</span>
+            </div>
+
+        </a>
+        <div class="flex gap-1 md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+
+            <button id="theme-change-button"
+                class="bg-gray-200 px-3 py-2 font-bold border-gray-800 border-2 rounded-xl dark:text-white dark:bg-primarydark dark:font-bold dark:border-gray-400 dark:border-2 dark:rounded-xl">
+                <i class="fa-solid fa-xs fa-circle-half-stroke"></i>
+                <span></span>
+            </button>
+            <a type="button" data-th-href="@{'/login'}"
+                class="bg-green-700 hover:bg-teal-900 text-white font-semibold rounded-lg text-md px-4 py-2 text-center dark:bg-teal-900 dark:text-white  dark:hover:bg-teal-800">Login</a>
+            <a type="button" data-th-href="@{'/register'}"
+                class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-semibold rounded-lg text-md px-3 py-2 text-center dark:bg-zinc-900 dark:border-white dark:border-2 dark:hover:bg-gray-800 ">Register</a>
+
+        </div>
+
+    </div>
+</nav>

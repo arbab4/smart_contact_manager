@@ -1,0 +1,20 @@
+{
+  "name": "smartcontactmanager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^3.4.6"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.12.4"
+  },
+  "description": ""
+}

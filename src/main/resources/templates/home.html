@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" data-th-replace="~{base :: parent(~{::#content}, ~{::title})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Smart Contact Manager</title>
+
+</head>
+
+<body>
+    <section id="content">
+        <!-- Hero Section -->
+        <section class="relative bg-cover bg-center h-screen"
+            style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/images/bg-home.jpg'); ">
+
+            <div class="relative z-10 text-center flex flex-col items-center justify-center h-full px-6">
+                <h1 class="text-5xl md:text-6xl font-bold text-white">Smart Contact Manager</h1>
+                <p class="text-lg md:text-2xl text-gray-200 mt-4">Manage your contacts effortlessly with phone numbers,
+                    emails, and social links.</p>
+                <a href="/user/contacts/add"
+                    class="mt-8 px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700">
+                    Add New Contact
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-12 bg-gray-100 dark:bg-primarydark">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 dark:text-white ">Features</h2>
+                    <p class="text-gray-600 mt-2 dark:text-white">Smart Contact Manager offers a range of features to
+                        help you stay organized.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 dark:text-white dark:bg-primarydark">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center  dark:bg-secondarydark dark:text-white">
+                        <img data-th-src="@{'/images/manage.jpg'}" alt="Manage Contacts"
+                            class="w-16 h-16 mx-auto mb-4 rounded-full">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Manage Contacts</h3>
+                        <p class="text-gray-600 mt-2 dark:text-white dark:bg-secondarydark">Easily add, update, and
+                            delete your contacts.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center  dark:text-white dark:bg-secondarydark">
+                        <img data-th-src="@{'/images/organize.jpg'}" alt="Organize Information"
+                            class="rounded-full w-16 h-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Organize Information</h3>
+                        <p class="text-gray-600 mt-2 dark:text-white">Store phone numbers, emails, and social links in
+                            one place.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center  dark:text-white dark:bg-secondarydark">
+                        <img data-th-src="@{'/images/search.png'}" alt="Search & Filter"
+                            class="rounded-fulls w-16 h-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Search & Filter</h3>
+                        <p class="text-gray-600 mt-2 dark:text-white">Quickly find contacts with powerful search and
+                            filtering tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 py-6 mt-12">
+            <div class="container mx-auto px-6 text-center text-white">
+                <p>&copy; 2024 Smart Contact Manager. All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>

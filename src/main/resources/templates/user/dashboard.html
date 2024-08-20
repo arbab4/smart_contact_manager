@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" data-th-replace="~{base :: parent(~{::#content}, ~{::title})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title data-th-text="${user.name} + '| Dashboard'">Dashboard</title>
+</head>
+
+<body>
+    <section id="content" class="pt-20">
+        <div th:if="${user}">
+            <div data-th-replace="~{user/sidebar::user-sidebar}"></div>
+        </div>
+        <div class="p-4 sm:ml-64">
+            <!-- Main content -->
+            <div class=" p-4">
+                <br>
+                <h1 class="text-3xl font-bold text-center dark:text-white mb-10">Dashboard</h1>
+
+                <!-- Cards Container -->
+                <div class="grid grid-cols-12">
+                    <div class="col-span-2"></div>
+                    <div class="col-span-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+
+                            <!-- Card 1: Total Contacts -->
+                            <div
+                                class="bg-white dark:bg-secondarydark p-6 rounded-lg shadow-lg border dark:border-gray-600">
+                                <h2 class="text-xl font-semibold mb-4 dark:text-white">Total Contacts</h2>
+                                <p class="text-3xl font-bold mb-4  dark:text-white" th:text="${totalContacts}"></p>
+                                <a href="/user/contacts" class="text-blue-500 hover:underline">View Contacts</a>
+                            </div>
+
+                            <!-- Card 2: Favourite Contacts -->
+                            <div
+                                class="bg-white dark:bg-secondarydark p-6 rounded-lg shadow-lg border dark:border-gray-600">
+                                <h2 class="text-xl font-semibold mb-4 dark:text-white">Favourite Contacts</h2>
+                                <p class="text-3xl font-bold mb-4 dark:text-white"
+                                    th:text="${pageContacts.getTotalElements}">0</p>
+                                <a data-th-href="@{'/user/contacts/favourite'}"
+                                    class="text-blue-500 hover:underline">View Favourite Contacts</a>
+                            </div>
+
+                            <!-- Card 3: Edit or Update Contact -->
+                            <div
+                                class="bg-white dark:bg-secondarydark p-6 rounded-lg shadow-lg border dark:border-gray-600">
+                                <h2 class="text-xl font-semibold mb-4 dark:text-white">Edit or Update Contact</h2>
+                                <p class="text-gray-700 mb-8 text-sm dark:text-gray-300">You can edit any contact by
+                                    clicking on pencil <span class="fa fa-pen"></span>icon in action column</p>
+
+                                <a href="/user/contacts"
+                                    class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Edit
+                                    Contact</a>
+                            </div>
+
+                            <!-- Card 4: Delete Contact -->
+                            <div
+                                class="bg-white p-6 dark:bg-secondarydark rounded-lg shadow-lg border dark:border-gray-600">
+                                <h2 class="text-xl font-semibold mb-4 dark:text-white">Delete Contact</h2>
+                                <p class="text-gray-700 mb-8 text-sm dark:text-gray-300">You can delete any contact
+                                    permanently by clicking on <span class="fa fa-trash"></span> icon in action column.
+                                </p>
+
+                                <a href="/user/contacts"
+                                    class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete Contact</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
